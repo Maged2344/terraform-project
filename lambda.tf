@@ -4,7 +4,7 @@ data "archive_file" "welcome" {
   output_path = "outputs/welcome.zip"
 }
 
-resource "aws_lambda_function" "test_lambda" {
+resource "aws_lambda_function" "test_lambda" { 
   filename      = "outputs/welcome.zip"
   function_name = "welcome"
   role          = "${aws_iam_role.lambda_role.arn}"

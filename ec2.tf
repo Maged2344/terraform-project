@@ -7,10 +7,9 @@ resource "aws_instance" "bastion" {
     command = "echo ${self.public_ip} >> bastion.ip.txt"
   }
   tags = {
-    Name = "bastion"
+    Name = "bastion1"
   }
 }
-
 
 resource "aws_instance" "application" {
   ami             = "ami-026b57f3c383c2eec"
