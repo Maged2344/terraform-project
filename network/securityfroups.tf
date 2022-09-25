@@ -10,7 +10,7 @@ resource "aws_security_group" "allow_ssh" {
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
-
+  
   tags = {
     Name = "allow_ssh"
   }
@@ -25,6 +25,7 @@ resource "aws_security_group" "allow_ssh_3000" {
     from_port        = 3000
     to_port          = 3000
     protocol         = "tcp"
+    cidr_blocks      = [aws_vpc.myvpc.cidr_block]
     }
 
 

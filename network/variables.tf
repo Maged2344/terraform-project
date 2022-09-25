@@ -17,3 +17,7 @@ variable "subnet3" {
 variable "subnet4" {
   type = string
 }
+
+# variable "region" {
+#   type = string
+# }
